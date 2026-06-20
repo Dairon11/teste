@@ -20,7 +20,7 @@ while contador < 20:
         print(num)                          # deu certo.
         contador += 1  # soma mais um numero
 
-    num += 1  
+    num += 1  23
 
 
 print("\n trabalho de") # identificação do autor. 
