@@ -1,10 +1,4 @@
 
-Ola Meu Amigo
-por gentileza digite sua altura:  1.68
-agora digite seu pesso em quilogramas:  74
-sua massa corporal é: 26.22 
-voce esta com sobre pesso.
-
 print("Este é o Pedra, Papel e Tesoura")
 print("Deve ser jogado por 2 jogadores. Vocês decidem quem começa.")
 
@@ -13,6 +7,9 @@ nome_jogador2 = input("Digite o nome do jogador 2: ")
 
 jogador1 = input(f"{nome_jogador1}, escolha uma destas opções: pedra, papel ou tesoura: ")
 jogador2 = input(f"{nome_jogador2}, escolha uma destas opções: pedra, papel ou tesoura: ")
+
+jogador1 = jogador1.lower().strip()
+jogador2 = jogador2.lower().strip()
 
 if jogador1 == jogador2:
     print("Deu empate!")
@@ -28,3 +25,6 @@ elif jogador1 == "papel" and jogador2 == "pedra":
 
 else:
     print(f"{nome_jogador2} venceu!")
+
+print("final do jogo !!")
+
