@@ -1,0 +1,26 @@
+print("\njogo do numero secreto")
+print("-------------------------")
+print("regras do jogo.")
+print("-------------------------")
+print("voce tera 5 tentativas para""\nadivinhar qual numero de 1 a 20""\nque a maquina escolheu.") 
+print("-------------------------")
+print("que comese os jogos !!")
+
+import random
+
+numero_aleatorio = random.randint(1, 20) 
+for tentativa in range(1, 6):
+  palpite = int(input(f"Tentativa {tentativa}: Digite um número de 1 a 20: "))
+  
+  if palpite < 1 or palpite > 20:
+    print("Digite um número entre 1 e 20.")  
+    continue
+  if palpite > numero_aleatorio:
+        print(f"seu palpite {palpite} foi muito alto!! ")
+  if palpite < numero_aleatorio:
+       print(f" seu palpite {palpite} foi muito baixo!! ")
+  if palpite == numero_aleatorio:
+      print(f" O seu palpite {palpite}: esta correto,parabens !! ")
+      break           
+else:
+    print(f"Você perdeu! O número era {numero_aleatorio}.")
