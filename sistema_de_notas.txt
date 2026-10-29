@@ -1,0 +1,42 @@
+print("Sistema de Notas")
+print("Digite o nome e as 3 notas de 5 alunos")
+
+for i in range(1, 6):
+    print(f"\n--- Aluno {i} ---")
+
+    aluno = input("Digite o nome do aluno: ")
+
+    nota1 = float(input(f"Digite a primeira nota de {aluno}: "))
+    nota2 = float(input(f"Digite a segunda nota de {aluno}: "))
+    nota3 = float(input(f"Digite a terceira nota de {aluno}: "))
+
+    media = (nota1 + nota2 + nota3) / 3
+
+    print(f"A média de {aluno} é: {media:.2f}")
+
+    if media >= 7:
+        print("Situação: Aprovado!")
+    else:
+        print("Situação: Reprovado!")
+        alunos[aluno] = {
+        "nota1": nota1,
+        "nota2": nota2,
+        "nota3": nota3,
+        "media": media,
+        "situacao": situacao
+    }
+
+# Mostrando os dados armazenados
+print("\n===== RESULTADO FINAL =====")
+
+for aluno, dados in alunos.items():
+    print(f"\nAluno: {aluno}")
+    print(f"Nota 1: {dados['nota1']:.2f}")
+    print(f"Nota 2: {dados['nota2']:.2f}")
+    print(f"Nota 3: {dados['nota3']:.2f}")
+    print(f"Média: {dados['media']:.2f}")
+    print(f"Situação: {dados['situacao']}")
+
+def validador_de_senha(valida):
+    print("A senha deve ter  ")
+    print("pelo menos 8 caracteres\n uma letra maiúscula\n uma letra minúscula\n um número\n um caractere especial")
